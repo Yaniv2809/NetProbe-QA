@@ -1,0 +1,22 @@
+targets:
+  - name: "Check Point Website"
+    host: "checkpoint.com"
+    tcp_ports: [80, 443]
+    url: "https://www.checkpoint.com"
+    check_tls: true
+    timeout_sec: 3
+    expect_success: true
+
+  - name: "Google Public DNS"
+    host: "8.8.8.8"
+    tcp_ports: [53]
+    timeout_sec: 1
+    expect_success: true
+
+  - name: "Dummy Bad Server"
+    host: "192.0.2.1"
+    tcp_ports: [80]
+    url: "http://192.0.2.1"
+    check_tls: false
+    timeout_sec: 1
+    expect_success: false
