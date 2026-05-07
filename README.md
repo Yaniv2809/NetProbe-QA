@@ -103,3 +103,4 @@ The GitHub Actions workflow (`.github/workflows/ci.yml`) runs the full test suit
 
 - Python 3.10+
 - No external networking tools required — uses Python's standard library (`socket`, `ssl`, `urllib`) with `pytest` and `allure-pytest`
+
